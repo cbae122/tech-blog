@@ -9,17 +9,19 @@
 </head>
 
 <body>
-  <div>
+  <div class="wrapper">
     <header>
+      <div>
+        <nav class="navbar">
+            <a class="link" href="/">Home</a>
+            <a class="link" href="/dashboard">Dashboard</a>
+            <a class="link" href="/" id="logout">Logout</a>
+            <a class="link" href="/login">Login</a>
+          </ul>
+        </nav>
+      </div>
+
       <h1><a href="/">The Tech Blog</a></h1>
-      <nav>
-        <ul>
-          <li><a class="link" href="/">Home</a></li>
-          <li><a class="link" href="/dashboard">Dashboard</a></li>
-          <li><a class="link" href="/" id="logout">Logout</a></li>
-          <li><a class="link" href="/login">Login</a></li>
-        </ul>
-      </nav>
     </header>
     <main>
       {{{body}}}

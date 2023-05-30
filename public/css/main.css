@@ -1,4 +1,43 @@
-/* REMOVE THIS AND ADD YOUR OWN CSS AS NEEDED */
 * {
-	outline: red dashed 2px;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar {
+	/* display: flex;
+	justify-content: flex-end;
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 10px; */
+	padding: 10px;
+	line-height: 1.25;
+	float: top;
+}
+
+main {
+	margin: 20px auto;
+	width: 90%;
+}
+
+.cards {
+	margin: 0 0 20px 0;
+	border: 2px;
+}
+
+header {
+	padding: 3% 4%;
 }
