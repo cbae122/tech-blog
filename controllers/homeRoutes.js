@@ -24,15 +24,20 @@ router.get('/', async (req, res) => {
 // login
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
   }
 
   res.render('login');
 });
-// signup
 
+// signup
 router.get('/signup', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
   res.render('signup');
 });
 
