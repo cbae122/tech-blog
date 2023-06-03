@@ -5,9 +5,20 @@
                 <div class="col-8">{{post.title}}</div>
             </a>
         </h2>
-        <div class="col-3">Posted By: {{post.user.username}}</div>
+        <div class="col-3">Posted By: {{post.user.username}} on {{format_date post.dateCreated}}</div>
     </div>
     <p class="post-body">{{post.content}}</p>
+</div>
+<input type="hidden" name="post-id" value="{{post.id}}"/>
+<div class="cards">
+    <div class="cards-header">
+        <form class="cards-body" id="new-comment-form">
+            <p class="form-label">Comment:</p>
+            <textarea class="form-input" name="comment-body" id="comment-body"></textarea>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        {{> comment post.comment}}
+    </div>
 </div>
 
 <script src="/js/signup.js"></script>
