@@ -689,3 +689,11 @@ GET / 304 - - 14.178 ms
 GET /dashboard 304 - - 13.050 ms
 GET /dashboard/edit/8 200 1744 - 7.779 ms
 GET / 304 - - 13.557 ms
+GET / 304 - - 40.237 ms
+GET / 304 - - 17.477 ms
+GET /dashboard 304 - - 22.866 ms
+GET /dashboard 304 - - 15.488 ms
+GET / 304 - - 34.985 ms
+GET /post/8 200 1645 - 23.997 ms
+GET /dashboard 304 - - 14.647 ms
+GET / 304 - - 12.906 ms
