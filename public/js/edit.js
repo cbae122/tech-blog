@@ -34,8 +34,8 @@ const deleteFormHandler = async () => {
 
 // need to update queryselector once post.handlebars is complete
 document
-    .querySelector('#new-comment-form')
-    .addEventListener('submit', commentFormHandler);
+    .querySelector('#edit-post-form')
+    .addEventListener('submit', editFormHandler);
 document
-    .querySelector('#new-comment-form')
-    .addEventListener('submit', commentFormHandler);
+    .querySelector('#delete-btn')
+    .addEventListener('click', deleteFormHandler);
