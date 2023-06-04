@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "start:dev": "concurrently \"nodemon server.js\" \"npm run lint\"",
-    "lint": "npx esw ./ --watch --fix"
+    "lint": "npx esw ./ --watch --fix",
+    "seed": "node seeds/index.js"
   },
   "keywords": [],
   "author": "",
