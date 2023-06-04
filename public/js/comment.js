@@ -22,8 +22,6 @@ const commentFormHandler = async (event) => {
     }
   };
 
-
-  // need to update queryselector once post.handlebars is complete
   document
   .querySelector('#new-comment-form')
   .addEventListener('submit', commentFormHandler);

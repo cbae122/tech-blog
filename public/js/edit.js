@@ -1,23 +1,54 @@
-const post_id = document.querySelector('').value;
-console.log(post_id);
+// const post_id = document.querySelector('input[name="post-id"]').value;
+// console.log(post_id);
 
-const editFormHandler = async (event) => {
+// const editFormHandler = async (event) => {
+//     event.preventDefault();
+
+//     const title = document.querySelector('input[name="post-title"]').value
+//     const content = document.querySelector('input[name="content"]').value
+
+//     console.log(title);
+//     console.log(content);
+
+
+//     const response = await fetch(`/api/post/${post_id}`, {
+//         method: 'POST',
+//         body: JSON.stringify({ title, content }),
+//         headers: { 'Content-Type': 'application/json' },
+//     });
+//     console.log(response);
+
+//     if (response.ok) {
+//         document.location.replace('/dashboard');
+//     } else {
+//         alert('Failed to edit post');
+//     }
+//     document.location.replace('/dashboard');
+// };
+
+
+async function editFormHandler(event) {
     event.preventDefault();
 
-    const title = document.querySelector('').value
-    const content = document.querySelector('').value
+    const title = document.querySelector('input[name="post-title"]').value
+    const content = document.querySelector('input[name="content"]').value
+
     console.log(title);
     console.log(content);
 
+    const post_id = window.location.toString().split('/')[
+        window.location.toString().split('/').length - 1
+    ]
 
     const response = await fetch(`/api/post/${post_id}`, {
         method: 'POST',
-        body: JSON.stringify({ title, content }),
+        body: JSON.stringify({ post_id: post_id, title, content }),
         headers: { 'Content-Type': 'application/json' },
     });
+    console.log(response);
 
     if (response.ok) {
-        document.location.rreplace('/dashboard');
+        document.location.replace('/dashboard');
     } else {
         alert('Failed to edit post');
     }
@@ -31,8 +62,6 @@ const deleteFormHandler = async () => {
     document.location.replace('/dashboard');
 };
 
-
-// need to update queryselector once post.handlebars is complete
 document
     .querySelector('#edit-post-form')
     .addEventListener('submit', editFormHandler);

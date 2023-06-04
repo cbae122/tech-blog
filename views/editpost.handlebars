@@ -7,14 +7,14 @@
         </div>
         <div>
             <label class="form-label" for="content">Content</label>
-            <input name="content" type="text" value="{{post.content}}" class="form-input" />  
+            <input name="content" type="text" value="{{post.content}}" class="form-input" />
         </div>
-        <div>
         <button type="submit" class="btn btn-primary">Edit Post</button>
-        <input type="hidden" name="post-id" value="{{post.id}}"/>
-        <button type="click" class="btn btn-primary" id="delete-btn">Delete Post</button>
-        </div>
+        <input type="hidden" name="post-id" value="{{post.id}}" />
     </form>
+    <div>
+        <button type="click" class="btn btn-primary" id="delete-btn">Delete Post</button>
+    </div>
 </div>
 
 <script src="/js/edit.js"></script>
