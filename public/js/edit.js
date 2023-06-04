@@ -36,23 +36,22 @@ async function editFormHandler(event) {
     console.log(title);
     console.log(content);
 
-    const post_id = window.location.toString().split('/')[
+    const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ]
 
-    const response = await fetch(`/api/post/${post_id}`, {
-        method: 'POST',
-        body: JSON.stringify({ post_id: post_id, title, content }),
+    const response = await fetch(`/api/post/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify({ post_id: id, title, content }),
         headers: { 'Content-Type': 'application/json' },
     });
-    console.log(response);
 
     if (response.ok) {
         document.location.replace('/dashboard');
     } else {
         alert('Failed to edit post');
     }
-    document.location.replace('/dashboard');
+
 };
 
 const deleteFormHandler = async () => {
