@@ -1,0 +1,13 @@
+<div>
+    <div>
+        <h2></h2>
+    </div>
+</div>
+<br>
+{{#if posts.length}}
+<div>
+    {{#each posts as |post|}}
+    {{> editdash post}}
+    {{/each}}
+</div>
+{{/if}}

@@ -5,35 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <div>
-        <nav class="navbar">
-            <a class="link" href="/">Home</a>
-            <a class="link" href="/dashboard">Dashboard</a>
-            {{#if logged_in}}
-            <a class="link" href="/" id="logout">Logout</a>
-            {{else}}
-            <a class="link" href="/login">Login</a>
-            {{/if}}
-          </ul>
-        </nav>
-      </div>
+  <nav class="navbar">
+    <ul>
+      <li class="li-bar nav-item"><a href="/">Home</a></li>
+      <li class="li-bar nav-item"><a href="/dashboard">Dashboard</a></li>
+      {{#if logged_in}}
+      <li class="li-bar nav-item"><a href="/">Logout</a></li>
+      {{else}}
+      <li class="li-bar nav-item"><a href="/login">Login</a></li>
+      {{#/unless}}
+    </ul>
+  </nav>
 
-      <h1><a href="/">The Tech Blog</a></h1>
-    </header>
+  <header class="banner">
+    <h1 class="tech-title"><a href="/">The Tech Blog</a></h1>
+  </header>
 
-    <main class="col-auto">
-      {{{body}}}
-    </main>
-    
-  </div>
-
+  <main class="col-auto">
+    {{{body}}}
+  </main>
 
 </body>
 
 </html>
+
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
