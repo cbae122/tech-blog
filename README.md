@@ -30,7 +30,7 @@ npm i
 ![Tech-Blog.](./public/images/Screenshot%202023-06-04%20at%201.21.14%20AM.png)
 
 ## Website Link
-- 
+- https://deploying-tech-blog.herokuapp.com/
   
 ## Credits
 - Instructor Diarmuid Murphy - during office hours, reviewed broken codes and provided solutions 
